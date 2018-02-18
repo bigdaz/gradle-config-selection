@@ -18,9 +18,9 @@ repositories {
 }
 
 dependencies {
-    conf project(':sub1')
-    conf project(':sub3-java')
-    conf project(':sub2-variants')
+    conf project(':subproject1-vanilla')
+    conf project(':subproject2-variants')
+    conf project(':subproject3-java')
     conf "org:pom1:1.0"
     conf "org:ivy1:1.0"
 }

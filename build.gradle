@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+def quality = Attribute.of("quality", String)
+
+configurations {
+    conf
+    confWithAttribute {
+        extendsFrom conf
+        attributes.attribute(quality, 'a')
+    }
+    implementation.extendsFrom conf
+}
+
+repositories {
+    maven { url "mavenrepo" }
+    ivy { url "ivyrepo" }
+}
+
+dependencies {
+    conf project(':sub1')
+    conf project(':sub3-java')
+    conf project(':sub2-variants')
+    conf "org:pom1:1.0"
+    conf "org:ivy1:1.0"
+}

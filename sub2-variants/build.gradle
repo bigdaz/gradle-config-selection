@@ -1,0 +1,17 @@
+def quality = Attribute.of("quality", String)
+
+configurations {
+    "default" {
+        attributes.attribute(quality, 'a')
+    }
+    compile {
+        attributes.attribute(quality, 'b')
+        attributes.attribute(Usage.USAGE_ATTRIBUTE, project.objects.named(Usage.class, 'java-api'))
+    }
+    runtime {
+        attributes.attribute(quality, 'c')
+    }
+    master {
+        attributes.attribute(quality, 'd')
+    }
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'config-selection'
+
+include 'sub1'
+include 'sub2-variants'
+include 'sub3-java'

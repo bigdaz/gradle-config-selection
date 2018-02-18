@@ -1,0 +1,9 @@
+plugins {
+    id 'base'
+}
+
+configurations {
+    compile
+    runtime
+    master
+}
